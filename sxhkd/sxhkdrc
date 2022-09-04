@@ -17,7 +17,7 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 super + g
-    chromium
+    firefox
 
 super + a
     ~/android-studio/bin/studio.sh
@@ -128,6 +128,12 @@ alt + shift + {h,j,k,l}
 # contract a window by moving one of its side inward
 super + alt + {h,j,k,l}
 	bspc node -z {right -12 0,bottom 0 12,bottom 0 -12,right 12 0}
+
+super + {+}
+    pactl set-sink-volume @DEFAULT_SINK@ +1%
+
+super + {-}
+    pactl set-sink-volume @DEFAULT_SINK@ -1%
 
 # move a floating window
 super + {Left,Down,Up,Right}
